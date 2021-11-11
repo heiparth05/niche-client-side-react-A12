@@ -1,0 +1,27 @@
+.clubContainer {
+  width: 86%;
+  margin: auto;
+  display: flex;
+  grid-gap: 3%;
+}
+.clubContent {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1028px) {
+  .clubContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 888px) {
+  .clubContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1%;
+  }
+  .clubContent img {
+    margin-bottom: 5%;
+  }
+}

@@ -1,0 +1,65 @@
+.loginContainer {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  grid-gap: 5%;
+}
+.loginContent1 {
+  width: 40%;
+  padding: 5%;
+}
+.loginCard {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 5%;
+}
+.loginCard input {
+  width: 100%;
+  padding: 1.8%;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+}
+.loginCard button {
+  width: 100%;
+  padding: 0.8%;
+  margin-bottom: 4%;
+  border: 1px solid rgba(0, 0, 0, 0.103);
+  background-color: rgba(211, 224, 224, 0.377);
+}
+.loginCard button:hover {
+  background-color: #7f7fd5;
+  color: azure;
+}
+.loginContent2 {
+  width: 50%;
+}
+.loginContent2 img {
+  width: 100%;
+}
+.googleContainer {
+  margin-top: 4%;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.wContent {
+  padding-top: 3.9%;
+}
+
+@media screen and (max-width: 1028px) {
+  .loginContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+  }
+  .loginContent1 {
+    width: 100%;
+  }
+  .loginContent2 {
+    width: 100%;
+  }
+}

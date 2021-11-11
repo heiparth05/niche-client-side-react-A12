@@ -1,0 +1,38 @@
+.contractContainer {
+  background: url(../../images/pexels-photo.jpeg);
+  background-size: cover;
+  background-color: rgba(45, 58, 74, 0.863);
+  background-blend-mode: darken;
+  padding: 4%;
+}
+.contractForm input,
+textarea {
+  padding: 0.77%;
+  width: 50%;
+  border: none;
+  background-color: rgba(110, 194, 194, 0.178);
+  color: azure;
+}
+.contractForm input::placeholder,
+textarea::placeholder {
+  color: rgba(240, 255, 255, 0.726);
+  padding: 0.9%;
+}
+
+.appointmentRM {
+  border: none;
+  background: linear-gradient(to bottom, #f85032, #e73827);
+  color: azure;
+  padding: 0.4%;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+@media screen and (max-width: 888px) {
+  .appointmentRM {
+    font-size: 0.875em;
+    display: block;
+    left: -60px;
+    margin-top: 35px;
+  }
+}

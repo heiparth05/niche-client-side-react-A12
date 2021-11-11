@@ -1,0 +1,26 @@
+.last_part {
+  background: url(../images/footer-bg.png);
+  color: rgba(59, 79, 117, 0.623);
+}
+.last_part b {
+  color: #f85032;
+}
+.play_store {
+  width: 151px;
+}
+.app_store {
+  width: 150px;
+}
+.footerIcon a {
+  text-decoration: none;
+}
+.footerIcon a img {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.fa-youtube:hover {
+  color: red;
+}
+#contract {
+  margin-top: 4%;
+}

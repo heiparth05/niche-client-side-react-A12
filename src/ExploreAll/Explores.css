@@ -1,0 +1,36 @@
+.exploresMainContainer {
+  width: 88%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1028px) {
+  .exploresMainContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .exploreTypewriter {
+    margin-top: 9%;
+  }
+  .exploreTypewriter span {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 888px) {
+  .exploresMainContainer {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+  .exploreTypewriter {
+    margin-top: 18%;
+  }
+  .exploreTypewriter span {
+    font-size: 1.2rem;
+  }
+}

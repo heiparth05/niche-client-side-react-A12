@@ -1,0 +1,27 @@
+.NavCard {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  align-self: center;
+  /* background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4); */
+}
+.NavImg {
+  width: 12%;
+}
+.NavCard li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #30475e;
+}
+.NavCard li a:hover {
+  color: #900c3f;
+}
+@media screen and (max-width: 1024px) {
+  .NavCard img {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 888px) {
+  .NavCard img {
+    width: 50%;
+  }
+}

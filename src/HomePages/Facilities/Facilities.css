@@ -1,0 +1,37 @@
+.facilitiesContainer {
+  display: flex;
+  background: url(../../images/header-bg3.jpeg);
+  margin: auto;
+  background-color: #978c8c;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+.facilitiesContent {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  width: 100%;
+  padding: 3.5%;
+  grid-gap: 10%;
+}
+
+@media screen and (max-width: 1028px) {
+  .facilitiesContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 5%;
+    text-align: center;
+  }
+  .facilitiesContent {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 888px) {
+  .facilitiesContainer {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    padding: 5%;
+  }
+}

@@ -1,0 +1,21 @@
+.reviewDContainer {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+  align-items: center;
+}
+.rDContent2 {
+  opacity: 0.2;
+  color: #f85032;
+}
+
+@media screen and (max-width: 888px) {
+  .rDContent1 h1 {
+    font-size: 1rem;
+  }
+  .rDContent2 i {
+    font-size: 5.5rem;
+  }
+}
