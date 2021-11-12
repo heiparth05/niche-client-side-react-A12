@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import NavBar from "../HomePages/NavBar/NavBar";
 import logReg from "../images/Motocross-bro.png";
 import swal from "sweetalert";
-import { Link, useLocation, useHistory  } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "./../Hooks/useAuth";
 import Loader from "react-loader-spinner";
 
@@ -36,7 +36,13 @@ const Register = () => {
 
     // console.log(loginData);
 
-    registerUser(loginData.email, loginData.password1,loginData.name,location,history);
+    registerUser(
+      loginData.email,
+      loginData.password1,
+      loginData.name,
+      location,
+      history
+    );
 
     // console.log(registerUser);
 

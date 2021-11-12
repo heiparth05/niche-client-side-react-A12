@@ -56,7 +56,7 @@ const NavBar = () => {
               {user?.email ? (
                 <li onClick={logOut} className="nav-item active ml-3">
                   <a className="nav-link" href="#">
-                    <NavLink to="">LogOut</NavLink>
+                    <NavLink to=""> LogOut</NavLink>
                   </a>
                 </li>
               ) : (

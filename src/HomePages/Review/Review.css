@@ -11,11 +11,33 @@
   color: #f85032;
 }
 
+.reviewContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: auto;
+  grid-row-gap: 5%;
+  grid-column-gap: 3%;
+}
+
+@media screen and (max-width: 1028px) {
+  .reviewContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reviewContainer {
+    margin-bottom: 100px;
+  }
+}
 @media screen and (max-width: 888px) {
   .rDContent1 h1 {
     font-size: 1rem;
   }
   .rDContent2 i {
     font-size: 5.5rem;
+  }
+  .reviewContent {
+    display: flex;
+    flex-direction: column;
   }
 }

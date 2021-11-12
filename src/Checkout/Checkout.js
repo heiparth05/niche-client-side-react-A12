@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "./Checkout.css";
-import NavBar from './../HomePages/NavBar/NavBar';
+import NavBar from "./../HomePages/NavBar/NavBar";
 
 const Checkout = () => {
   const { helmetId } = useParams();
@@ -9,7 +9,9 @@ const Checkout = () => {
   const [singlePro, setSinglePro] = useState({});
 
   useEffect(() => {
-    fetch(`https://blooming-fjord-40715.herokuapp.com/allHelmetData/${helmetId}`)
+    fetch(
+      `https://blooming-fjord-40715.herokuapp.com/allHelmetData/${helmetId}`
+    )
       .then((res) => res.json())
       .then((data) => setSinglePro(data));
   }, [helmetId]);
@@ -32,8 +34,6 @@ const Checkout = () => {
               Checkout
             </button>
           </div>
-
-
 
           <div className="checkoutContent2">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis

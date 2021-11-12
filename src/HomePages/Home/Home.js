@@ -13,7 +13,8 @@ const Home = () => {
   return (
     <>
       <div>
-        <NavBar /> <br />
+        <NavBar />
+        <br />
         <br />
         <br />
         <Header />
@@ -36,7 +37,7 @@ const Home = () => {
         <br />
         <br />
         <br />
-        <Review />
+        <Review /> <br /> <br /> <br />
         <br />
         <br />
         <br />

@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 
 const Product = (props) => {
-  const { _id,img, name, stock, price } = props.sentPro;
+  const { _id, img, name, stock, price } = props.sentPro;
   return (
     <div>
       <Fade left cascade>

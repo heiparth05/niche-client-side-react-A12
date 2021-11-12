@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Review.css";
+import ShowReview from "./ShowReview";
 
 const Review = () => {
+  const [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    fetch("https://blooming-fjord-40715.herokuapp.com/allFeedback")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, []);
+
   return (
     <div>
       <div className="reviewDContainer">
@@ -15,6 +23,14 @@ const Review = () => {
         </div>
         <div className="rDContent2">
           <i className="fas fa-quote-right fa-7x"></i>
+        </div>
+      </div>{" "}
+      <br /> <br /> <br />
+      <div className="reviewContainer">
+        <div className="reviewContent">
+          {reviews.map((review) => (
+            <ShowReview sentRev={review}></ShowReview>
+          ))}
         </div>
       </div>
     </div>

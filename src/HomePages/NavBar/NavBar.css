@@ -2,7 +2,6 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   align-self: center;
-  /* background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4); */
 }
 .NavImg {
   width: 12%;
@@ -13,7 +12,6 @@
   color: #30475e;
 }
 .NavCard li a:hover {
-  /* color: #900c3f; */
   color: red;
 }
 @media screen and (max-width: 1024px) {

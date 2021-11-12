@@ -17,8 +17,8 @@ const PayNow = () => {
                 <Typewriter
                   options={{
                     strings: [
-                      "Payment Method Add Soon 😊  ",
                       "Stay With Us 🤞 ",
+                      "Payment Method Add Soon 😊  ",
                     ],
                     autoStart: true,
                     loop: true,

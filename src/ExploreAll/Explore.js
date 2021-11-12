@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 
 const Explore = (props) => {
-  const { _id,img, name, stock, price } = props.sentExpo;
+  const { _id, img, name, stock, price } = props.sentExpo;
   return (
     <div>
       <Fade left cascade>

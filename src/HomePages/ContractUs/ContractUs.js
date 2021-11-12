@@ -45,7 +45,6 @@ const ContractUs = () => {
             <br />
             <button
               type="submit"
-              // style={{ ,  }}
               className="appointmentRM"
               variant="contained"
             >

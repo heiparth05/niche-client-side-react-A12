@@ -36,7 +36,7 @@ const Products = () => {
         </div>
       </div>
       <div className="productMainContainer">
-        {products.slice(0,9).map((product) => (
+        {products.slice(0, 9).map((product) => (
           <Product key={product._id} sentPro={product}></Product>
         ))}
       </div>
