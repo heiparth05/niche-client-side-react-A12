@@ -5,7 +5,7 @@ const OurClub = () => {
   return (
     <div>
       <center>
-        <h2 style={{ color: "#f85032" }}>Our Club</h2>
+        <h2 className="ourClubHead" style={{ color: "#f85032" }}>Our Club</h2>
         <h5>Buy our product and become a part of our club</h5>
       </center>{" "}
       <br />

@@ -4,7 +4,7 @@
   margin-top: 5%;
   margin-bottom: 5%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 35px;
   text-align: center;
 }

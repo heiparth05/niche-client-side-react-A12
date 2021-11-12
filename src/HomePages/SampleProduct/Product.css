@@ -4,10 +4,22 @@
   padding: 3%;
   transition: 0.5s;
   transition-timing-function: linear;
+  height: 52vh;
 }
 .productContainer img {
   padding: 5%;
 }
 .productContainer:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+@media screen and (max-width: 1028px) {
+  .productContainer {
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 888px) {
+  .productContainer {
+    height: 48vh;
+  }
 }

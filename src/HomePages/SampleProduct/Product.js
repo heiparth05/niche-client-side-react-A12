@@ -1,9 +1,10 @@
 import React from "react";
 import "./Product.css";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 
 const Product = (props) => {
-  const { img, name, stock, price } = props.sentPro;
+  const { _id,img, name, stock, price } = props.sentPro;
   return (
     <div>
       <Fade left cascade>
@@ -17,9 +18,11 @@ const Product = (props) => {
             {" "}
             <b>Price : $ {price}</b>
           </p>
-          <button type="button" class="btn btn-outline-danger">
-            Buy Now
-          </button>
+          <Link to={`/checkout/${_id}`}>
+            <button type="button" className="btn btn-outline-danger">
+              Buy Now
+            </button>
+          </Link>
         </div>
       </Fade>
     </div>

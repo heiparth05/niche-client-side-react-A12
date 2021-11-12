@@ -14,7 +14,7 @@ const Review = () => {
           </h1>
         </div>
         <div className="rDContent2">
-          <i class="fas fa-quote-right fa-7x"></i>
+          <i className="fas fa-quote-right fa-7x"></i>
         </div>
       </div>
     </div>

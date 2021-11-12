@@ -1,0 +1,48 @@
+.checkoutContainer {
+  width: 70%;
+  margin: auto;
+  margin-top: 10%;
+  display: flex;
+  grid-gap: 7%;
+  align-items: center;
+}
+.checkoutContent1 {
+  width: 40%;
+  text-align: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+.checkoutContent1 img {
+  padding: 5%;
+}
+.checkoutContent1 button {
+  margin-bottom: 12px;
+}
+.checkoutContent2 {
+  width: 100%;
+}
+
+@media screen and (max-width: 1028px) {
+  .checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+  }
+  .checkoutContent1 {
+    width: 60%;
+  }
+  .checkoutContent2 {
+    margin-top: 8%;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  .checkoutContent1 {
+    width: 100%;
+    margin-top: 25%;
+  }
+  .checkoutContent2 {
+    margin-top: 15%;
+  }
+}

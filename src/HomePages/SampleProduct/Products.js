@@ -9,7 +9,7 @@ import Zoom from "react-reveal/Zoom";
 const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("./sampleProduct.json")
+    fetch("https://blooming-fjord-40715.herokuapp.com/allHelmetData")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -36,8 +36,8 @@ const Products = () => {
         </div>
       </div>
       <div className="productMainContainer">
-        {products.map((product) => (
-          <Product sentPro={product}></Product>
+        {products.slice(0,9).map((product) => (
+          <Product key={product._id} sentPro={product}></Product>
         ))}
       </div>
     </div>

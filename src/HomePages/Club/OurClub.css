@@ -14,6 +14,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .ourClubHead{
+    margin-top: 18%;
+  }
 }
 @media screen and (max-width: 888px) {
   .clubContainer {

@@ -11,6 +11,7 @@ import DashHeader from "./Dashboard/DashHeader/DashHeader";
 import MyOrders from "./Dashboard/MyOrders/MyOrders";
 import PayNow from "./Dashboard/PayNow/PayNow";
 import GiveReview from "./Dashboard/GiveReview/GiveReview";
+import Checkout from "./Checkout/Checkout";
 
 function App() {
   return (
@@ -38,8 +39,12 @@ function App() {
                 <Explores></Explores>
               </Route>
 
-              <PrivateRoute exact path="/dashboard">
+              <PrivateRoute path="/dashboard">
                 <DashHeader></DashHeader>
+              </PrivateRoute>
+
+              <PrivateRoute exact path="/checkout/:helmetId">
+                <Checkout></Checkout>
               </PrivateRoute>
 
               <PrivateRoute exact path="/myOrders">

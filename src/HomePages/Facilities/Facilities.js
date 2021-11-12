@@ -7,7 +7,7 @@ const Facilities = () => {
       <div className="facilitiesContainer">
         <div className="facilitiesContent">
           <div className="fasContent1">
-            <i class="fas fa-shipping-fast fa-4x"></i>
+            <i className="fas fa-shipping-fast fa-4x"></i>
           </div>
           <div className="fasContent2">
             <h5>Free Shipping</h5>
@@ -16,7 +16,7 @@ const Facilities = () => {
         </div>
         <div className="facilitiesContent">
           <div className="fasContent1">
-            <i class="fas fa-headset fa-4x"></i>
+            <i className="fas fa-headset fa-4x"></i>
           </div>
           <div className="fasContent2">
             <h5>Support 24/7</h5>
@@ -25,7 +25,7 @@ const Facilities = () => {
         </div>
         <div className="facilitiesContent">
           <div className="fasContent1">
-            <i class="fas fa-shield-virus fa-4x"></i>
+            <i className="fas fa-shield-virus fa-4x"></i>
           </div>
           <div className="fasContent2">
             <h5>100% Safety</h5>
@@ -34,7 +34,7 @@ const Facilities = () => {
         </div>
         <div className="facilitiesContent">
           <div className="fasContent1">
-            <i class="fas fa-tags fa-4x"></i>
+            <i className="fas fa-tags fa-4x"></i>
           </div>
           <div className="fasContent2">
             <h5>Hot Offers</h5>

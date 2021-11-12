@@ -13,7 +13,8 @@
   color: #30475e;
 }
 .NavCard li a:hover {
-  color: #900c3f;
+  /* color: #900c3f; */
+  color: red;
 }
 @media screen and (max-width: 1024px) {
   .NavCard img {

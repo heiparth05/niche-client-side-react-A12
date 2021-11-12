@@ -3,12 +3,15 @@ import React, { useState } from "react";
 import NavBar from "../HomePages/NavBar/NavBar";
 import logReg from "../images/Motocross-bro.png";
 import swal from "sweetalert";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory  } from "react-router-dom";
 import useAuth from "./../Hooks/useAuth";
 import Loader from "react-loader-spinner";
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
+
+  const location = useLocation();
+  const history = useHistory();
 
   const { user, isLoading, authError, registerUser, signInUseGoogle } =
     useAuth();
@@ -22,7 +25,7 @@ const Register = () => {
 
     setLoginData(newLoginData);
 
-    console.log(field, value, newLoginData);
+    // console.log(newLoginData);
   };
 
   const registerSubmit = (e) => {
@@ -31,11 +34,11 @@ const Register = () => {
       return;
     }
 
-    console.log(loginData);
+    // console.log(loginData);
 
-    registerUser(loginData.email, loginData.password1);
+    registerUser(loginData.email, loginData.password1,loginData.name,location,history);
 
-    console.log(registerUser);
+    // console.log(registerUser);
 
     e.preventDefault();
   };

@@ -24,15 +24,18 @@ textarea::placeholder {
   background: linear-gradient(to bottom, #f85032, #e73827);
   color: azure;
   padding: 0.4%;
+  margin-top: 2%;
+  width: 10%;
   border-bottom-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 @media screen and (max-width: 888px) {
+  .contractForm input,
+  textarea {
+    width: 90%;
+  }
   .appointmentRM {
-    font-size: 0.875em;
-    display: block;
-    left: -60px;
-    margin-top: 35px;
+    width: 22%;
   }
 }

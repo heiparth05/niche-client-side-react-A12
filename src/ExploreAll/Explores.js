@@ -9,7 +9,7 @@ import Explore from "./Explore";
 const Explores = () => {
   const [explores, setExplores] = useState([]);
   useEffect(() => {
-    fetch("./exploreProduct.json")
+    fetch("https://blooming-fjord-40715.herokuapp.com/allHelmetData")
       .then((res) => res.json())
       .then((data) => setExplores(data));
   }, []);
@@ -37,8 +37,8 @@ const Explores = () => {
         </center>
         <div>
           <div className="exploresMainContainer">
-            {explores.map((explore) => (
-              <Explore sentExpo={explore}></Explore>
+            {explores.slice(9, 36).map((explore) => (
+              <Explore key={explore._id} sentExpo={explore}></Explore>
             ))}
           </div>
         </div>
