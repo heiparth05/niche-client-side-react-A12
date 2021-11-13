@@ -32,7 +32,7 @@ const Checkout = () => {
     data.helmetPrice = "$" + singlePro.price;
     console.log(data);
 
-    fetch("http://localhost:5000/allOrders", {
+    fetch("https://blooming-fjord-40715.herokuapp.com/allOrders", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

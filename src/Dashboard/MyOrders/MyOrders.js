@@ -2,15 +2,23 @@ import React, { useState, useEffect } from "react";
 import DashNav from "./../DashNav/DashNav";
 import MyOrder from "./MyOrder";
 import "./MyOrders.css";
+import useAuth from "./../../Hooks/useAuth";
 
 const MyOrders = () => {
+  const { user } = useAuth();
+  const email = user.email;
+
+  console.log(email);
+
   const [myOrders, setMyOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allOrders")
+    // fetch(`https://blooming-fjord-40715.herokuapp.com/allOrders/${email}`)
+
+    fetch("https://blooming-fjord-40715.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
-  }, []);
+  }, [email]);
 
   return (
     <>

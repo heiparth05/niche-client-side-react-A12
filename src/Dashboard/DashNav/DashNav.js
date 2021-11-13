@@ -2,9 +2,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import useAuth from "./../../Hooks/useAuth";
+import MakeAdmin from "./../MakeAdmin/MakeAdmin.js";
+import ManageAllProducts from "./../ManageAllProducts/ManageAllProducts.js";
+import AddProduct from "./../AddProduct/AddProduct.js";
+
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 
 const DashNav = () => {
   const { logOut } = useAuth();
+
+  let { path, url } = useRouteMatch();
+
   return (
     <div>
       <nav
@@ -33,6 +41,12 @@ const DashNav = () => {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active ml-3">
               <a className="nav-link" href="#">
+                <NavLink to="/dashboard">Admin Dashboard</NavLink>
+              </a>
+            </li>
+
+            <li className="nav-item active ml-3">
+              <a className="nav-link" href="#">
                 <NavLink to="/home">Home</NavLink>
               </a>
             </li>
@@ -55,6 +69,24 @@ const DashNav = () => {
               </a>
             </li>
 
+            <li className="nav-item active ml-3">
+              <a className="nav-link" href="#">
+                <Link to={`${url}/makeAdmin`}>Make Admin</Link>
+              </a>
+            </li>
+
+            <li className="nav-item active ml-3">
+              <a className="nav-link" href="#">
+                <Link to={`${url}/manageAllProducts`}>Manage All Product</Link>
+              </a>
+            </li>
+
+            <li className="nav-item active ml-3">
+              <a className="nav-link" href="#">
+                <NavLink to={`${url}/addProduct`}>Add Products</NavLink>
+              </a>
+            </li>
+
             <li onClick={logOut} className="nav-item active ml-3">
               <a className="nav-link" href="#">
                 <NavLink to="">LogOut</NavLink>
@@ -63,6 +95,19 @@ const DashNav = () => {
           </ul>
         </div>
       </nav>
+      <div>
+        <Switch>
+          <Route path={`${path}/makeAdmin`}>
+            <MakeAdmin></MakeAdmin>
+          </Route>
+          <Route path={`${path}/manageAllProducts`}>
+            <ManageAllProducts></ManageAllProducts>
+          </Route>
+          <Route path={`${path}/addProduct`}>
+            <AddProduct></AddProduct>
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 };

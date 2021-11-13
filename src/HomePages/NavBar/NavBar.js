@@ -48,7 +48,7 @@ const NavBar = () => {
               {user?.email && (
                 <li className="nav-item active ml-3">
                   <a className="nav-link" href="#">
-                    <NavLink to="/dashboard">Dashboard</NavLink>
+                    <NavLink to="/dashboard">Your Dashboard</NavLink>
                   </a>
                 </li>
               )}
