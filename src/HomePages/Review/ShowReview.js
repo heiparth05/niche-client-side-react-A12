@@ -11,7 +11,7 @@ const ShowReview = (props) => {
           <center>
             <img src="https://img.icons8.com/nolan/50/quote.png" />
           </center>
-          <br /> <b> " {feedback} "</b> <br /> <br />
+          <br /> <b>" {feedback} "</b> <br /> <br />
           <small>
             {" "}
             <b>- {name}</b>

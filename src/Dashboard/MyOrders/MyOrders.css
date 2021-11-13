@@ -1,0 +1,11 @@
+.myOrdersMainContainer {
+  width: 60%;
+  margin: auto;
+}
+
+@media screen and (max-width: 1028px) {
+  .myOrdersMainContainer {
+    width: 80%;
+    margin: auto;
+  }
+}

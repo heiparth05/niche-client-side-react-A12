@@ -1,0 +1,38 @@
+.helmetDContainer {
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 4%;
+}
+.helmetDContent1 {
+  padding: 3.5%;
+  border-right: 1px solid rgba(154, 161, 152, 0.418);
+  width: 100%;
+}
+.helmetDContent2 {
+  padding: 3%;
+  width: 100%;
+  border-right: 1px solid rgba(154, 161, 152, 0.418);
+}
+.helmetDContent3 {
+  padding: 3%;
+  width: 100%;
+}
+
+@media screen and (max-width: 888px) {
+  .helmetDContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .helmetDContent1 {
+    text-align: center;
+    padding-top: 9%;
+  }
+  .helmetDContent2 {
+    padding: 5%;
+  }
+  .helmetDContent3 {
+    text-align: center;
+    padding-bottom: 8.5%;
+  }
+}

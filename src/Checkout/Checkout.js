@@ -2,11 +2,19 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "./Checkout.css";
 import NavBar from "./../HomePages/NavBar/NavBar";
+import useAuth from "./../Hooks/useAuth";
+import { useForm } from "react-hook-form";
 
 const Checkout = () => {
+  const { user } = useAuth();
+
   const { helmetId } = useParams();
 
+  const { register, handleSubmit, reset } = useForm();
+
   const [singlePro, setSinglePro] = useState({});
+
+  console.log(singlePro.img, singlePro.price, singlePro.name);
 
   useEffect(() => {
     fetch(
@@ -15,6 +23,29 @@ const Checkout = () => {
       .then((res) => res.json())
       .then((data) => setSinglePro(data));
   }, [helmetId]);
+
+  const onSubmit = (data) => {
+    data.clientEmail = user.email;
+    data.clientName = user.displayName;
+    data.helmetImg = singlePro.img;
+    data.helmetName = singlePro.name;
+    data.helmetPrice = "$" + singlePro.price;
+    console.log(data);
+
+    fetch("http://localhost:5000/allOrders", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert("Are you sure you want to purchase this product?");
+        reset();
+      });
+  };
 
   return (
     <>
@@ -30,25 +61,52 @@ const Checkout = () => {
               {" "}
               <b>Price : $ {singlePro.price}</b>
             </p>
-            <button type="button" className="btn btn-outline-danger">
-              Checkout
-            </button>
           </div>
 
           <div className="checkoutContent2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            temporibus nostrum aliquid eos delectus cupiditate minima eligendi
-            nobis provident voluptate labore soluta, autem excepturi
-            perferendis, recusandae omnis dignissimos doloribus, ut corrupti
-            tempora aliquam accusamus aspernatur? Recusandae voluptatum soluta,
-            accusamus eos earum maiores reprehenderit architecto provident
-            dolorum illum qui quasi a voluptates excepturi officia suscipit
-            velit voluptas laborum quibusdam aliquam consequatur hic nemo nulla
-            animi! Exercitationem blanditiis maiores esse doloremque dolores
-            minus aspernatur consequatur nihil porro voluptatum sunt dignissimos
-            eveniet dolore possimus temporibus expedita minima accusantium
-            voluptatibus illum architecto ducimus, dolorum quaerat? Cum quasi
-            excepturi optio molestiae error tempora amet nisi.
+            <div className="reactFormDiv ckOFDiv">
+              <form
+                className="reactForm checkOutForm"
+                onSubmit={handleSubmit(onSubmit)}
+              >
+                <input value={user.displayName} {...register("clientName")} />{" "}
+                <br />
+                <input value={user.email} {...register("clientEmail")} /> <br />
+                <input
+                  value={singlePro.name}
+                  {...register("helmetName")}
+                />{" "}
+                <br />
+                <input value={singlePro.img} {...register("helmetImg")} />{" "}
+                <br />
+                <input
+                  value={"$" + singlePro.price}
+                  {...register("helmetPrice", {
+                    required: true,
+                    maxLength: 20,
+                  })}
+                />{" "}
+                <br />
+                <input
+                  required
+                  placeholder="Your home address"
+                  {...register("address")}
+                />{" "}
+                <br />
+                <input
+                  required
+                  placeholder="Give us your phone number"
+                  type="number"
+                  {...register("phoneNumber")}
+                />{" "}
+                <br />
+                <input
+                  value="Checkout"
+                  className="reactFSub checkoutSub"
+                  type="submit"
+                />
+              </form>
+            </div>
           </div>
         </div>
       </div>

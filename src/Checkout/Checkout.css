@@ -19,6 +19,21 @@
 .checkoutContent1 button {
   margin-bottom: 12px;
 }
+.checkOutForm input {
+  width: 60%;
+  margin-bottom: 2%;
+  padding: 0.7%;
+  border: 1px solid rgba(128, 128, 128, 0.404);
+}
+.checkoutSub {
+  background-color: rgba(247, 59, 59, 0.5);
+  color: black;
+  border: none;
+}
+.checkoutSub:hover {
+  cursor: pointer;
+}
+
 .checkoutContent2 {
   width: 100%;
 }
@@ -34,6 +49,8 @@
   }
   .checkoutContent2 {
     margin-top: 8%;
+    width: 100%;
+    margin-left: 40%;
   }
 }
 
@@ -44,5 +61,10 @@
   }
   .checkoutContent2 {
     margin-top: 15%;
+    width: 100%;
+    margin-left: 0%;
+  }
+  .checkoutContent2 input {
+    width: 100%;
   }
 }
