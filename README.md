@@ -1,5 +1,4 @@
 ## Hi welcome to MotorMania Here you can buy some premium quality helmet 
-### [Motor Mania](https://niche-website-assignment-12.web.app/) it is our live site link.You may visit this website and give us your valuable feedback 
 
 ### Buy our product and become a part of our club. The reason why you buy helmet from our websiste 
 01.Buy best budget modular helmet <br/>
